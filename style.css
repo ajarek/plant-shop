@@ -1,0 +1,480 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    width: 100%;
+    background: #4CAF50;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    color: white;
+    padding: 1rem 3rem;
+}
+
+.wrap,
+.wrap1 {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social i,
+.tel a {
+    margin-left: 1rem;
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.tel {
+    display: flex;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.search {
+    position: relative;
+}
+
+.search input {
+    height: 30px;
+    width: 300px;
+    padding: 0 5px;
+    border: none;
+    border-radius: 4px;
+    background: #81C784;
+}
+
+.search i {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.search input::placeholder {
+    color: white;
+}
+
+nav {
+    position: sticky;
+    top: -1px;
+    background-color: #FFF9C4;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 3rem;
+    z-index: 99;
+}
+
+nav .adress a {
+    text-decoration: none;
+    margin-right: 10px;
+    color: black;
+}
+
+nav .navIcons i {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    height: 80vh;
+}
+
+main .slaider {
+    width: 100%;
+    height: 100%;
+    background: url('./img/shop.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .slaider .description {
+    width: 30%;
+}
+
+main .slaider .description button {
+    padding: 10px 35px;
+    margin-top: 20px;
+    background: #087f23;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+main .slaider .description button:hover,
+.arrivals .img button:hover,
+.categorySec .category button:hover,
+.productsSec .products button:hover,
+.sec1 button:hover,
+.form form button:hover {
+    background-color: white;
+    color: #087f23;
+    outline: 3px solid #087f23;
+}
+
+.arrivals {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    place-items: center;
+    gap: 15px;
+}
+
+.arrivals .img {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.arrivals .img button,
+.categorySec .category button,
+.productsSec .products button,
+.sec1 button,
+.form form button {
+    width: 20%;
+    padding: 10px;
+    margin-top: 20px;
+    background: #087f23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 6px 6px 12px rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.arrivals #img1 {
+    background: url('./img/hause.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.arrivals #img2 {
+    background: url('./img/office.jpg');
+    background-position: center bottom;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.h2 {
+    width: 100%;
+    display: flex;
+    padding: 0 20px;
+    margin: 10px;
+}
+
+.h2 span {
+    color: #087f23;
+}
+
+.categorySec {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 5px;
+}
+
+.categorySec .category {
+    background-color: #FFF9C4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0px;
+
+}
+
+.categorySec .category button {
+    width: 50%;
+}
+
+.productsSec {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.productsSec .products {
+    background-color: #C8E6C9;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 0 10px 0;
+}
+
+.productsSec .products .img1 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.productsSec .products .img1 .procent {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    font-size: 1.5rem;
+}
+
+.productsSec .products .img1 .icons {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+
+.productsSec .products .img1 .icons i {
+    margin-right: 5px;
+    font-size: 1.2rem;
+    color: blue;
+}
+
+.productsSec .products .img1 img {
+    width: 70%;
+}
+
+.productsSec .products .stars {
+    color: goldenrod;
+}
+
+.productsSec .products .quantity input {
+    text-align: center;
+    border: none;
+    width: 100px;
+    height: 25px;
+    margin: 10px;
+    font-size: 1.2rem;
+}
+
+.productsSec .products .price .erase {
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+
+.productsSec .products .price span:first-child {
+    font-size: 1.2rem;
+    color: red;
+}
+
+.productsSec .products button {
+    width: 40%;
+}
+
+.dealSec {
+    width: 100%;
+    background: linear-gradient(#C8E6C9, #eee);
+    margin-top: 10px;
+    padding: 20px 0;
+}
+
+.icoDeal {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    font-size: 1.3rem;
+    color: #087f23;
+}
+
+.icoDeal div {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.icoDeal div::before {
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 0px;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: yellow;
+}
+
+.icoDeal div i {
+    font-size: 2rem;
+    color: black;
+    z-index: 5;
+}
+
+.icoDeal div p {
+    font-size: 0.8rem;
+    color: black;
+}
+
+.wrap3 {
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.sec1 {
+    width: 50%;
+    height: 100%;
+}
+
+.sec1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.wrap3 .sec1 .miss {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding: 25px;
+    justify-content: space-around;
+}
+
+.wrap3 .sec2 {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.wrap3 .sec2 .day {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    outline: 1px solid gray;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+    margin-bottom: 40px;
+}
+
+.wrap3 .sec2 .day::after {
+    content: 'Day';
+    position: absolute;
+    left: -1px;
+    bottom: -25px;
+    font-size: 1.4rem;
+    width: 100%;
+    text-align: center;
+    color: white;
+    background: black;
+    border: 1px solid gray;
+}
+
+#hour::after {
+    content: 'Hour';
+}
+
+#minute::after {
+    content: 'Minute';
+}
+
+#second::after {
+    content: 'Second';
+}
+
+.sec1 button {
+    margin-left: 25px;
+}
+
+#contact {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
+    gap: 10px;
+    background: linear-gradient(#eee, #fff);
+}
+
+.form {
+    width: 550px;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form form {
+    width: 90%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.form form input {
+    height: 30px;
+    border: none;
+    background: transparent;
+    border-bottom: 1px solid gray;
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+.form form textarea {
+    font-size: 1.2rem;
+    padding-left: 5px;
+}
+
+.form form button {
+    width: 100%;
+}
+
+footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    gap: 10px;
+    padding: 25px;
+}
+
+footer div li {
+    list-style: none;
+}
+
+footer div a {
+    text-decoration: none;
+    color: black;
+}
