@@ -90,7 +90,7 @@ nav {
 
 nav .adress a {
     text-decoration: none;
-    margin-right: 10px;
+    margin-right: .6rem;
     color: black;
 }
 
@@ -99,12 +99,18 @@ nav .navIcons i {
     cursor: pointer;
 }
 
+nav .data {
+    color: red;
+}
+
 main {
     width: 100%;
     height: 80vh;
 }
 
 main .slaider {
+    overflow: hidden;
+    position: relative;
     width: 100%;
     height: 100%;
     background: url('./img/shop.jpg');
@@ -116,6 +122,39 @@ main .slaider {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+.shopingCart {
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0px;
+    width: 20rem;
+    height: 100%;
+    background-color: #C8E6C9;
+    color: #087f23;
+    padding: 0.5rem;
+}
+
+.shopingCart ul {
+    list-style: none;
+    padding: 10px 0;
+    font-size: 1.2rem;
+}
+
+.shopingCart ul li span {
+    color: red;
+    font-weight: 900;
+    margin-left: 1rem;
+    cursor: pointer;
+}
+
+.shopingCart #pay {
+    font-size: 1.5rem;
+}
+
+.active {
+    display: block;
 }
 
 main .slaider .description {
@@ -165,7 +204,6 @@ main .slaider .description button:hover,
 }
 
 .arrivals .img button,
-.categorySec .category button,
 .productsSec .products button,
 .sec1 button,
 .form form button {
@@ -214,16 +252,37 @@ main .slaider .description button:hover,
 }
 
 .categorySec .category {
+    width: 100%;
+    position: relative;
+    overflow: hidden;
     background-color: #FFF9C4;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-around;
     padding: 0 0 0.6rem 0px;
-
 }
 
-.categorySec .category button {
-    width: 50%;
+.categorySec .category h3 {
+    margin-bottom: 3rem;
+}
+
+.btn {
+    position: absolute;
+    padding: 0.6rem;
+    margin-top: 1.3rem;
+    background: #087f23;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0.3rem 0.3rem 0.5rem rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: transform 0.3s;
+    bottom: -5rem
+}
+
+.show {
+    bottom: 0.8rem
 }
 
 .productsSec {
@@ -347,10 +406,8 @@ main .slaider .description button:hover,
     width: 100%;
     height: auto;
     display: grid;
-    grid-template-columns: repeat(2,1fr);
-   place-items: center;
-
-
+    grid-template-columns: repeat(2, 1fr);
+    place-items: center;
 }
 
 .sec1 {
@@ -360,7 +417,6 @@ main .slaider .description button:hover,
 
 .sec1 img {
     width: 100%;
-   
     object-fit: cover;
 }
 
@@ -381,7 +437,6 @@ main .slaider .description button:hover,
 
 .wrap3 .sec2 .day {
     position: relative;
-   
     width: 6.25rem;
     height: 6.25rem;
     outline: 1px solid gray;
@@ -429,7 +484,8 @@ main .slaider .description button:hover,
     gap: 0.6rem;
     background: linear-gradient(#eee, #fff);
 }
-.maps{
+
+.maps {
     width: 100%;
     display: flex;
     justify-content: flex-start;
@@ -502,26 +558,28 @@ footer div a {
         grid-template-rows: repeat(3, 1fr);
 
     }
-    .wrap3{
-        grid-template-columns: repeat(1,1fr);
+
+    .wrap3 {
+        grid-template-columns: repeat(1, 1fr);
 
     }
-    .sec1{
-       
+
+    .sec1 {
+
         margin-top: 1rem;
     }
 
     #contact {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        place-items:center start ;
+        place-items: center start;
     }
 
     iframe {
         width: 100vw;
-       
     }
-    .form{
+
+    .form {
         width: 100vw;
     }
 
@@ -542,17 +600,19 @@ footer div a {
     .wrap3 .sec1 .miss {
         width: 100%;
     }
-
-   
 }
+
 @media (max-width:600px) {
     html {
         font-size: 14px;
     }
-    .wrap,.wrap1{
+
+    .wrap,
+    .wrap1 {
         flex-wrap: wrap;
     }
-    .arrivals{
+
+    .arrivals {
         grid-template-columns: 1fr;
     }
 
@@ -563,14 +623,16 @@ footer div a {
     .productsSec {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(6, 1fr);
+    }
 
-    }
-    .icoDeal{
+    .icoDeal {
         flex-wrap: wrap;
     }
-    .wrap3{
+
+    .wrap3 {
         flex-wrap: wrap;
     }
+
     #contact {
         grid-template-columns: repeat(1, 1fr);
         grid-template-rows: repeat(2, 1fr);
@@ -579,7 +641,9 @@ footer div a {
     iframe {
         width: 100vw;
     }
-    .maps,.form{
+
+    .maps,
+    .form {
         width: 100vw;
     }
 
@@ -601,11 +665,11 @@ footer div a {
         width: 100%;
     }
 
-    
+
 }
+
 @media (max-width:365px) {
     .wrap3 .sec2 .day {
         width: 4.5rem;
-
     }
 }
