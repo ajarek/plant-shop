@@ -123,6 +123,18 @@ main .slaider {
     justify-content: center;
     align-items: center;
 }
+.left{
+    font-size: 3rem;
+    position: absolute;
+    left: 1rem;
+    color: red;
+}
+.right{
+    font-size: 3rem;
+    position: absolute;
+    right: 1rem;
+    color: red;
+}
 
 .shopingCart {
     display: none;

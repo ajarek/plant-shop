@@ -10,7 +10,30 @@ const ul = document.querySelector('.shopingCart ul')
 const pay = document.querySelector('#pay')
 const category = document.querySelectorAll('.category')
 const categoryBtn = [...document.querySelectorAll('.category button')]
+const slaider = document.querySelector('main .slaider')
+const left=document.querySelector('.left')
+const right=document.querySelector('.right')
+let src = ['shop','shop1','shop2']
 let arr = []
+let i=3
+let j=-1
+
+
+
+
+function blankme(){
+i--
+slaider.style.background=`url('./img/${src[i]}.jpg')`
+slaider.style.backgroundPosition = `center bottom`;
+if(i==0){i=3}
+}
+function add(){
+    j++
+    slaider.style.background=`url('./img/${src[j]}.jpg')`
+    slaider.style.backgroundPosition = `center bottom`;
+    if(j==2){j=-1}
+    }
+
 
 
 function deal() {
@@ -76,3 +99,5 @@ cat.addEventListener('click',()=>{
     categoryBtn[index].classList.toggle('show')
 })
 }) 
+left.addEventListener('click',blankme)
+right.addEventListener('click',add)
